@@ -7,7 +7,7 @@ O desvio padrão é calculado por:
 
 ![](https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{N}\sum_{i=0}^N&space;(f_i&space;-&space;y_i)^2})
 
-Onde ![](https://latex.codecogs.com/gif.latex?f_i) é o valor predito pelo modelo e ![](https://latex.codecogs.com/gif.latex?y_i) o valor real. Esta medida informa o quanto os resíduos se distanciam da função de predição. Portanto, quanto menor, melhor. 
+Onde ![](https://latex.codecogs.com/gif.latex?f_i) é o valor predito pelo modelo e ![](https://latex.codecogs.com/gif.latex?y_i) o valor real. Esta medida informa o quanto os valores reais se distanciam da função de predição. Portanto, quanto menor, melhor. 
 
 Devido ao fator quadrático, um resíduo maior é mais penalizado. Portanto, esta métrica é mais adequada quando a penalidade por um erro não é simplesmente proporcional ao tamanho desse erro.
 
