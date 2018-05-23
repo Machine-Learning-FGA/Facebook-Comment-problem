@@ -27,7 +27,18 @@ Diferentemente do desvio padrão, porém, esta métrica atribui pesos proporcion
 Devido ao fator quadrático, o RMSE é sempre maior ou igual ao MAE.
 
 ## Coeficiente de determinação (R2)
+O Coeficiente de determinação R2 é obtido através de:
 
+![](https://s0.wp.com/latex.php?latex=R2+%3D+%5Cfrac%7Barea%7Ebetween%7Eour%7Emodel%7Eand%7Emean%7Emodel%7D%7Barea%7Ebetween%7Ebest%7Eand%7Emean%7Emodel%7D&bg=eeeeee&fg=666666&s=0)
+Onde, a métrica R2, pode ser negativa, variando entre -1 e 1 ou entre 0 e 1 em escala absoluta. O valor de R2, determina, se, a previsão obtida pelo método de regressão, pode ser melhorada.
+
+Em algumas bibliografias, R2 é dito variar entre 0 e 1, como é estabelecido no wikipedia, entretanto, na documentação da SKlearn R2 é dito variar entre -1 e 1, isto se deve ao fato do primeiro modelo, não nos dizer diretamente onde nosso modelo se encontra com relação à média dos valores, sendo representado por um valor absoluto, incapaz de dizer se o valor estimado encontra-se acima ou abaixo da média. 
+
+Para a R2, o melhor modelo é representado por um erro absoluto igual a 0 em todos os casos da regressão. O pior modelo seria o caso onde, não necessariamente teriamos um modelo pífio e com previsões péssimas e sim um caso onde, teriamos muitos dados faltantes para o calculo da estimativa do modelo.  
+
+
+O gráfico abaixo utiliza de um modelo para estimativa de preços de imóveis, sendo neste, representado um gráfico de melhor caso e pior caso.
+![](https://ragrawal.files.wordpress.com/2017/05/r2_expliation_graph1.jpg?w=656)
 
 ## Fontes
 * [Performance measures (Datacamp)](https://campus.datacamp.com/courses/introduction-to-machine-learning-with-r/chapter-2-performance-measures?ex=1)
@@ -41,3 +52,4 @@ Devido ao fator quadrático, o RMSE é sempre maior ou igual ao MAE.
 * [RMSE: Root Mean Square Error (Statistics How To)](http://www.statisticshowto.com/rmse/)
 * [MAE and RMSE — Which Metric is Better? (Human in a Machine World)](https://medium.com/human-in-a-machine-world/mae-and-rmse-which-metric-is-better-e60ac3bde13d)
 * [Metrics – Regression (Josh Lawman)](http://joshlawman.com/metrics-regression/)
+* [Intuition behind R2 and other regression evaluation metrics](https://ragrawal.wordpress.com/2017/05/06/intuition-behind-r2-and-other-regression-evaluation-metrics/)
