@@ -5,9 +5,9 @@
 
 O desvio padrão é calculado por:
 
-![](https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{N}\sum_{i=0}^N&space;(f_i&space;-&space;y_i)^2})
+![](https://latex.codecogs.com/gif.latex?RMSE&space;=&space;\sqrt{\frac{1}{N}\sum_{i=0}^N&space;(y_i&space;-&space;f_i)^2})
 
-Onde ![](https://latex.codecogs.com/gif.latex?f_i) é o valor predito pelo modelo e ![](https://latex.codecogs.com/gif.latex?y_i) o valor real. Esta medida informa o quanto os valores reais se distanciam da função de predição. Portanto, quanto menor, melhor. 
+Onde ![](https://latex.codecogs.com/gif.latex?y_i) é o valor real e ![](https://latex.codecogs.com/gif.latex?f_i) é o valor predito pelo modelo. Esta medida informa o quanto os valores reais se distanciam da função de predição. Portanto, quanto menor, melhor. 
 
 Devido ao fator quadrático, um resíduo maior é mais penalizado. Portanto, esta métrica é mais adequada quando a penalidade por um erro não é simplesmente proporcional ao tamanho desse erro.
 
@@ -16,9 +16,9 @@ O termo dentro da raíz também pode ser utilizado diretamente como métrica, qu
 ## Erro médio absoluto (MAE)
 O erro médio absoluto é dado por:
 
-![](https://latex.codecogs.com/gif.latex?MAE&space;=&space;\frac{1}{N}\sum_{i=0}^N&space;|f_i&space;-&space;y_i|)
+![](https://latex.codecogs.com/gif.latex?MAE&space;=&space;\frac{1}{N}\sum_{i=0}^N&space;|y_i&space;-&space;f_i|)
 
-Onde ![](https://latex.codecogs.com/gif.latex?f_i) é o valor predito pelo modelo e ![](https://latex.codecogs.com/gif.latex?y_i) o valor real. 
+Onde ![](https://latex.codecogs.com/gif.latex?y_i) é o valor real e ![](https://latex.codecogs.com/gif.latex?f_i) é o valor predito pelo modelo. 
 
 Assim como o desvio padrão, indica quão distantes as predições estão dos valores reais, sendo que seu valor ideal é zero.
 
@@ -30,6 +30,8 @@ Devido ao fator quadrático, o RMSE é sempre maior ou igual ao MAE.
 O Coeficiente de determinação R2 é obtido através de:
 
 ![](https://s0.wp.com/latex.php?latex=R2+%3D+%5Cfrac%7Barea%7Ebetween%7Eour%7Emodel%7Eand%7Emean%7Emodel%7D%7Barea%7Ebetween%7Ebest%7Eand%7Emean%7Emodel%7D&bg=eeeeee&fg=666666&s=0)
+
+
 Onde, a métrica R2, pode ser negativa, variando entre -1 e 1 ou entre 0 e 1 em escala absoluta. O valor de R2, determina, se, a previsão obtida pelo método de regressão, pode ser melhorada.
 
 Em algumas bibliografias, R2 é dito variar entre 0 e 1, como é estabelecido no wikipedia, entretanto, na documentação da SKlearn R2 é dito variar entre -1 e 1, isto se deve ao fato do primeiro modelo, não nos dizer diretamente onde nosso modelo se encontra com relação à média dos valores, sendo representado por um valor absoluto, incapaz de dizer se o valor estimado encontra-se acima ou abaixo da média. 
